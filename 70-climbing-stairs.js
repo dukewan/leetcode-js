@@ -17,14 +17,26 @@ var climbStairs = function(n) {
 };
 
 /**
- * Dynamic Programming - Memorized Version
+ * Dynamic Programming - Memorized Recursive Version
  */
- var W = [0, 1, 2];
+var W = [0, 1, 2];
 
- var climbStairs = function(n) {
- 	if (W[n] === undefined){
+var climbStairs = function(n) {
+	if (W[n] === undefined){
 		W[n] = climbStairs(n - 2) + climbStairs(n - 1);
 	}
 
 	return W[n];
- };
+};
+
+/**
+ * Dynamic Programming - Loop Version
+ */
+var climbStairs = function(n) {
+	var W = [0, 1, 2];
+	for (var i = 3; i <= n; i++) {
+		W[i] = W[i - 2] + W[i - 1];
+	}
+
+	return W[n];
+};
