@@ -5,7 +5,7 @@
  */
 var addDigits = function (num) {
     var quotient = num,
-		remainder = 0,
+        remainder = 0,
         sum = 0;
 
     while (quotient >= 10) {
