@@ -5,15 +5,15 @@
 
 /**
  * Recursive version
- * Will exceed the time limit.
+ * NOTICE!: Will exceed the time limit.
  */
 var climbStairs = function(n) {
-	if (n == 1)
-		return 1;
-	else if (n == 2)
-		return 2;
+    if (n == 1)
+        return 1;
+    else if (n == 2)
+        return 2;
 
-	return climbStairs(n - 1) + climbStairs(n - 2);
+    return climbStairs(n - 1) + climbStairs(n - 2);
 };
 
 /**
@@ -22,21 +22,21 @@ var climbStairs = function(n) {
 var W = [0, 1, 2];
 
 var climbStairs = function(n) {
-	if (W[n] === undefined){
-		W[n] = climbStairs(n - 2) + climbStairs(n - 1);
-	}
+    if (W[n] === undefined){
+        W[n] = climbStairs(n - 2) + climbStairs(n - 1);
+    }
 
-	return W[n];
+    return W[n];
 };
 
 /**
- * Dynamic Programming - Loop Version
+ * Dynamic Programming - Iteration Version
  */
 var climbStairs = function(n) {
-	var W = [0, 1, 2];
-	for (var i = 3; i <= n; i++) {
-		W[i] = W[i - 2] + W[i - 1];
-	}
+    var W = [0, 1, 2];
+    for (var i = 3; i <= n; i++) {
+        W[i] = W[i - 2] + W[i - 1];
+    }
 
-	return W[n];
+    return W[n];
 };
