@@ -1,3 +1,5 @@
+// Grid Illumination
+// better performance
 let checkIllumination = function (N, lamps, queries) {
   let X = new Map(),
     Y = new Map(),

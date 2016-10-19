@@ -1,3 +1,4 @@
+// Grid Illumination
 let checkIllumination = function (N, lamps, queries) {
   let result = []
   queries.forEach(function (query) {
